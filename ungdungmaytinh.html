@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="Caculator.js"></script>
+    <h1>Caculator</h1>
+    input number 1 <input type="text"id="i1">
+    <br>
+    <br>
+    input nuber 2 <input type="text"id="i2">
+    <br>
+    <br>
+    opretor <select name="" id="i3">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+     <br>
+    result <input type="text" name="" id="i4">
+    <br>
+    <br>
+    <button onclick="lamgidi()">submit</button>
+    <script>
+        function lamgidi(){
+            var i1 =document.getElementById("i1").value ;
+            var i2 =document.getElementById("i2").value ;
+            var i3 =document.getElementById("i3").value;
+            var resurt = 0
+            
+            if(i3 =="+"){
+                resurt = parseInt(i1) + parseInt(i2);
+                document.getElementById("i4").value= resurt ;
+            }
+            else if(i3 =="-"){
+                resurt = parseInt(i1) - parseInt(i2);
+                document.getElementById("i4").value= resurt ;
+            }
+            else if(i3 =="*"){
+                resurt = parseInt(i1) * parseInt(i2);
+                document.getElementById("i4").value= resurt ;
+            }
+            else{
+                resurt = parseInt(i1) / parseInt(i2);
+                document.getElementById("i4").value= resurt ;
+            }
+            document.getElementById("i4").value= resurt ;
+        }
+    </script>
+        
+
+</body>
+</html>
